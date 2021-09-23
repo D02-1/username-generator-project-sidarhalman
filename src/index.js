@@ -36,7 +36,7 @@ function createRandomNumber(minNumber, maxNumber)
     const num = Math.floor(Math.random() * (maxNumber - minNumber) + minNumber);
 
     // wir geben die zufällige numer zurück
-    console.log(num);
+    return num;
 }
 
 // - Eine function mit der grose buchstabel
@@ -66,3 +66,24 @@ function capitalizeString(word)
 
 
 // - eine function mit der wir den benutzernamen generieren und auf die ergebnisse der anderen functioniren zugreifen
+function createRandomUserNAme(maxnumber)
+{
+    // wir holen uns die wörter
+    const words = getWords();
+ 
+    //Wir holen uns aus aus der wortlist die advecjtive
+    const adj = words.adjs[ Math.floor(Math.random() * (words.adjs.length-1)) ];
+
+    const noun  =words.nouns[ Math.floor(Math.random() * (words.nouns.length - 1)) ];
+
+    //wir holen uns unsere zuhfallyźahl
+    const randomNumber = createRandomNumber(10000, maxnumber)
+
+    const finalUserName = `${ capitalizeString(adj) }${ capitalizeString(noun) }${ maxnumber !==0 ? randomNumber : '' }` ;
+
+
+    console.log(finalUserName);
+
+}
+createRandomUserNAme(50000);
+// - Einen Export 
