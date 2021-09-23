@@ -41,3 +41,23 @@ function createRandomNumber(minNumber, maxNumber)
 createRandomNumber(1, 20000)
 // - Eine function mit der grose buchstabel
 // - eine function mit der wir den benutzernamen generieren und auf die ergebnisse der anderen functioniren zugreifen
+
+function capitalizeString(word)
+{
+    //Prüfe ob kein wort vorhanden ist
+    if(word === undefined || word.lenght === 0 || !isNaN(word))
+    {
+        return "Default";
+    }
+
+    //Wir nehmen den ersten buchstaben  von unserem String , und ndern ihn auf UpperCase
+    const wordStart = word.charAt(0).toUpperCase();
+
+    //Wir nehmen den rest des string und ändern ihn auf LowerCase
+    const wordRest  = word.substring(1).toLowerCase();
+
+    //Wir geben den fertigen String zurück
+    return wordStart + wordRest ;
+}
+
+console.log(capitalizeString("hallo"));
