@@ -38,10 +38,14 @@ function createRandomNumber(minNumber, maxNumber)
     // wir geben die zufällige numer zurück
     console.log(num);
 }
-createRandomNumber(1, 20000)
-// - Eine function mit der grose buchstabel
-// - eine function mit der wir den benutzernamen generieren und auf die ergebnisse der anderen functioniren zugreifen
 
+// - Eine function mit der grose buchstabel
+/**
+ * @function capitalizeString
+ * @description Take....
+ * @param {string} word 
+ * @returns  { string }
+ */
 function capitalizeString(word)
 {
     //Prüfe ob kein wort vorhanden ist
@@ -60,4 +64,5 @@ function capitalizeString(word)
     return wordStart + wordRest ;
 }
 
-console.log(capitalizeString("hallo"));
+
+// - eine function mit der wir den benutzernamen generieren und auf die ergebnisse der anderen functioniren zugreifen
